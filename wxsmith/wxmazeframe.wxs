@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="wxmazeFrame">
+		<pos>0,0</pos>
+		<size>1300,702</size>
+		<fg>#FFFF00</fg>
+		<bg>#400080</bg>
+		<minsize>-1,-1</minsize>
+		<maxsize>-1,-1</maxsize>
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxStaticBox" name="ID_STATICBOX3" variable="StaticBoxSearch" member="yes">
+			<label>Search</label>
+			<pos>8,232</pos>
+			<size>272,168</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBoxBoard" member="yes">
+			<label>Board</label>
+			<pos>8,64</pos>
+			<size>272,88</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBoxMaze" member="yes">
+			<label>Maze</label>
+			<pos>8,152</pos>
+			<size>272,80</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StRowsxCols" member="yes">
+			<label>ROWS x COLS    :</label>
+			<pos>16,128</pos>
+		</object>
+		<object class="wxButton" name="ID_BN_CLOSE" variable="BnClose" member="yes">
+			<label>Close</label>
+			<pos>112,456</pos>
+			<fg>#400080</fg>
+			<bg>#FF8080</bg>
+			<handler function="OnBnCloseClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxTextCtrl" name="ID_TXT_ROWS" variable="TxtRows" member="yes">
+			<value>20</value>
+			<pos>112,120</pos>
+			<size>32,24</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StTitle" member="yes">
+			<label>Maze Using Graph Algorithms</label>
+			<pos>920,8</pos>
+			<size>216,32</size>
+			<font>
+				<size>0</size>
+				<style>normal</style>
+				<weight>bold</weight>
+				<family>teletype</family>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BN_BUILD_MAZE" variable="BnBuildMaze" member="yes">
+			<label>Build Maze</label>
+			<pos>200,200</pos>
+			<size>72,24</size>
+			<enabled>0</enabled>
+			<fg>#400080</fg>
+			<bg>#FF8080</bg>
+			<handler function="OnBnBuildMazeClick1" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX1" variable="ComMazeOption" member="yes">
+			<content>
+				<item>Depth First Search</item>
+				<item>Breath First Search</item>
+			</content>
+			<selection>0</selection>
+			<pos>152,168</pos>
+			<size>120,21</size>
+		</object>
+		<object class="wxButton" name="ID_BN_SEARCH" variable="BnSearch" member="yes">
+			<label>Search Paths</label>
+			<pos>200,368</pos>
+			<size>72,23</size>
+			<enabled>0</enabled>
+			<fg>#400080</fg>
+			<bg>#FF8080</bg>
+			<handler function="OnBnSearchClick1" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BN_BUILD_BOARD" variable="BnBuildBoard" member="yes">
+			<label>Build Board</label>
+			<pos>200,120</pos>
+			<size>72,24</size>
+			<fg>#400080</fg>
+			<bg>#FF8080</bg>
+			<handler function="OnBnBuildBoardClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StDepth" member="yes">
+			<label>Depth                 :</label>
+			<pos>16,80</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TXT_DEPTH" variable="TxtDepth" member="yes">
+			<value>4</value>
+			<pos>112,80</pos>
+			<size>32,21</size>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX2" variable="ComSearchOption" member="yes">
+			<content>
+				<item>Depth First Search</item>
+				<item>Breath First Search</item>
+				<item>Dijkstra Search</item>
+				<item>BellmanFord Search</item>
+			</content>
+			<selection>0</selection>
+			<pos>152,248</pos>
+			<size>120,21</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TxtSource" member="yes">
+			<value>0</value>
+			<pos>152,296</pos>
+			<size>40,21</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="TxtDestinaiton" member="yes">
+			<value>35</value>
+			<pos>152,328</pos>
+			<size>40,21</size>
+			<handler function="OnTextCtrl2Text1" entry="EVT_TEXT" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StSource" member="yes">
+			<label>Source                  :</label>
+			<pos>16,296</pos>
+			<size>96,24</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StDestination" member="yes">
+			<label>Destination           :</label>
+			<pos>16,336</pos>
+			<size>120,21</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StSelectSearchalg" member="yes">
+			<label>Select Search Alg :</label>
+			<pos>16,256</pos>
+			<size>112,24</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT8" variable="StPeudocode" member="yes">
+			<label></label>
+			<pos>928,48</pos>
+			<size>360,384</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT9" variable="StAnimaitonSeeed" member="yes">
+			<label>Search Animation Speed :</label>
+			<pos>16,376</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX3" variable="ComAnimationSpeedOption" member="yes">
+			<content>
+				<item>0</item>
+				<item>1</item>
+				<item>2</item>
+				<item>3</item>
+				<item>4</item>
+				<item>5</item>
+			</content>
+			<selection>1</selection>
+			<pos>152,368</pos>
+			<size>40,21</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT7" variable="STSelectMazeAlg" member="yes">
+			<label>Select Maze Alg  :</label>
+			<pos>16,176</pos>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>
